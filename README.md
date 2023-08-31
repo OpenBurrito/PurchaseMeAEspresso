@@ -1,6 +1,7 @@
-# Sample Hardhat Project
+# Purchase Me A Espresso
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project is built using [hardhat](https://hardhat.org), and allows anyone to send [Espressos](https://en.wikipedia.org/wiki/Espresso) and [Burritos](https://en.wikipedia.org/wiki/Burrito) to the Web Creators! 🎨
+
 
 Try running some of the following tasks:
 
