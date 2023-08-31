@@ -32,4 +32,21 @@ contract PurchaseMeAExpresso {
     function getAllCoffee() public view returns (Coffee[] memory) {
         return coffee;
     }
+
+    function getBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
+
+    function withdraw() public {
+        // throw an error if the caller is not the owner
+        require(msg.sender == owner, "You are not the owner");
+
+        uint256 balance = address(this).balance;
+        require (balance > 0, "There is no balance to withdraw");
+
+        (bool success, ) = owner.call{value: balance}("");
+        require(success, "Failed to withdraw balance");
+
+        //payable(msg.sender).transfer(balance);
+    }
 }
